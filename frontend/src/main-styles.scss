@@ -1,0 +1,40 @@
+/* Global styles and change variables goes. Handheld folder. */
+
+
+//  IMPORTING FONTS (LATO AND NUNITO) ----------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Nunito:400,700');
+
+
+// COLOR SCHEME --------------------------------------------------------------------
+$oldRose: #b53e46;
+$tan: #d4a8a6;
+$darkSlate: #1b181c; 
+$dark-green: #7f9680;
+
+$light: #f8f8f8;
+
+
+// Updating Bulma Variables. --------------------------------------------------------
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $darkSlate;
+
+$link: $oldRose;
+
+// Component Variables.
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+// Setting Custom Global Styles. ----------------------------------------------------
+html { background: linear-gradient(to right top, $oldRose, $darkSlate); overflow: hidden;}
+
+html, body { height: 100%; overflow-y: hidden!important;}
+
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
