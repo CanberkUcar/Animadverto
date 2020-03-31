@@ -1,0 +1,16 @@
+{
+  "name": "animadverto-api",
+  "version": "1.0.0",
+  "description": "MEAN Stack WebApp for Personal Use",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Janberk Ucar",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.5"
+  }
+}
