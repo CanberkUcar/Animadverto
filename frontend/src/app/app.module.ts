@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EntryViewComponent } from './pages/entry-view/entry-view.component';
 
+import { HttpClientModule } from '@angular/common/http'; // Importing Http Client
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { EntryViewComponent } from './pages/entry-view/entry-view.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

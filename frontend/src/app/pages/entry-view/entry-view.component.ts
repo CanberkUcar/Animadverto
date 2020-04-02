@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EntryService } from 'src/app/entry.service'
 
 @Component({
   selector: 'app-entry-view',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private entryService: EntryService ) { }
 
   ngOnInit(): void {
+  }
+
+  createNewList(){
+    return this.entryService.createCategory('Testing').subscribe((response: any) => {
+      console.log(response);
+    });
   }
 
 }
