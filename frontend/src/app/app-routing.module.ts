@@ -12,11 +12,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Imported Components. -----------------------------------------------------
 import { EntryViewComponent } from './pages/entry-view/entry-view.component';
+import { NewCategoryComponent } from './pages/new-category/new-category.component';
 
 
 // Routes. ------------------------------------------------------------------
 const routes: Routes = [
-  {path: '', component: EntryViewComponent}
+  { path: '', redirectTo: '/categories', pathMatch: 'full' },
+  { path: 'new-category', component: NewCategoryComponent },
+  { path: 'categories', component:EntryViewComponent },
+  { path: 'categories/:categoryId', component:EntryViewComponent }
 ];
 
 

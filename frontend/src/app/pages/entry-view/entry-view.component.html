@@ -7,15 +7,14 @@
             </h1>
 
             <div class="catalog-menu">
-                <a class="catalog-menu-item is-active">
-                    <p>Catalog 1</p>
+                <!-- NG FOR LOOP-->
+                <a class="catalog-menu-item" *ngFor="let category of categories" [routerLink]="['/categories', category._id]" routerLinkActive="is-active">
+                    <p>{{ category.title }}</p>
                 </a>
-                <a class="catalog-menu-item">
-                    <p> Catalog 2</p>
-                </a>
+
             </div>
 
-            <button class="button is-primary" (click)="createNewList()" >+ New Catalog</button>
+            <button class="button is-primary" routerLink="/new-category" >+ New Catalog</button>
             
         </div>
 
@@ -25,11 +24,16 @@
             </h1>
 
             <!-- Entry ELEMENTS -->
-            <div class="entry">
+            <div class="entry" *ngFor="let entry of entries">
                 <div class="entry-text">
-                    <p>Entry first.</p>
+                    <p>{{ entry.title }}</p>
                 </div>
             </div>
+
+            <button class="circle-add-button">
+
+            </button>
+            
         </div>
 
     </div>

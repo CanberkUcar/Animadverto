@@ -18,5 +18,12 @@ export class EntryService {
     return this.webReqService.post('categories', { title });
   }
 
+  getCategories(){
+    // Getting categories list. Just as in Postman.
+    return this.webReqService.get('categories');
+  }
 
+  getEntries(categoryId: string) {
+    return this.webReqService.get(`categories/${categoryId}/entries`);
+  }
 }

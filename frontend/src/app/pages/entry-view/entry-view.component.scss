@@ -132,12 +132,13 @@
 
 .circle-add-button {
     position: absolute;
-    bottom: 35px;
-    right: 35px;
+    bottom: -35px;
+    right: -35px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    
+    background: $primary;
+    border: none;
 }
 
 .empty-state-text {
