@@ -1,3 +1,10 @@
+/**
+ * MONGOSE MAIN CLASS. -------------------------------------------------------------------------------------------
+ * MIDDLEWARE AND ROUTING.
+ */
+
+// Variables. --------------------------------------------
+
 const express = require('express');
 const app = express();
 
@@ -5,6 +12,9 @@ const {mongoose} = require('./db/mongoose');
 
 const bodyParser = require('body-parser'); // Middleware.
 
+// -------------------------------------------------------
+
+// Loads. ------------------------------------------------
 // Load Middleware.
 app.use(bodyParser.json());
 
@@ -18,10 +28,13 @@ app.use(function(req, res, next) {
     next();
 });
 
+// -------------------------------------------------------
 
-/* ROUTE HANDLERS */
+/* ROUTE HANDLERS ----------------------------------------------- */
+
 
 /* CATEGORY ROUTES  --------------------------------------------- */
+
 /**
  * GET /categories.
  * Purpose: Getting existing categories on the DB.
@@ -83,10 +96,11 @@ app.delete('/categories/:id', (req, res) => {
     });
 });
 
-/* Test Route. --------------------------------------
+/* Test Route. -----------------------------------------------------
 app.get('/', (req, res) => {
     res.send("Test Message"); // Get request respond.
 }) */
+
 /* END CATEGORY ROUTES ------------------------------------------ */
 
 

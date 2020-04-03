@@ -6,19 +6,22 @@ import { EntryService } from 'src/app/entry.service'
   templateUrl: './new-category.component.html',
   styleUrls: ['./new-category.component.scss']
 })
+
+// ANCHOR NEWCATEGORY COMPONENT -------------------------------------------------
 export class NewCategoryComponent implements OnInit {
 
+  // COTR.
   constructor(private entryService: EntryService ){}
 
   ngOnInit(): void {
   }
 
+  // Create Category Method call from FrontEnd.----------------------------------
   createCategory(title: string) {
-    return this.entryService.createCategory(title).subscribe((response: any) => {
-    console.log(response);
-    // Redirecting user to /category/response._id
-  });
-}
-
+      return this.entryService.createCategory(title).subscribe((response: any) => {
+      console.log(response);
+      // NOTE Redirecting user to /category/response._id
+    });
+  } // END OF Create Category METHOD --------------------------------------------
 
 }

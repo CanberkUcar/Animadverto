@@ -1,5 +1,7 @@
+/* DB MODEL FOR CATEGORY ---------------------------------- */
 const mongoose = require('mongoose');
 
+// --------------------------------------------------------
 const CategorySchema = new mongoose.Schema({
     title: {
         type: String,
@@ -8,6 +10,7 @@ const CategorySchema = new mongoose.Schema({
         trim: true
     }
 })
+// --------------------------------------------------------
 
 const Category = mongoose.model('Category', CategorySchema);
 

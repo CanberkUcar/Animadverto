@@ -1,5 +1,7 @@
+/* DB MODEL FOR ENTRIES -------------------------- */
 const mongoose = require('mongoose');
 
+// --------------------------------------------------
 const EntrySchema = new mongoose.Schema({
     title: {
         type: String,
@@ -12,6 +14,7 @@ const EntrySchema = new mongoose.Schema({
         required: true
     }
 })
+// --------------------------------------------------
 
 const Entry = mongoose.model('Entry', EntrySchema);
 

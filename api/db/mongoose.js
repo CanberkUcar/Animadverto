@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 // Making it global JavaScript Promise.
 mongoose.Promise = global.Promise;
 
-// ------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
 
 mongoose.connect('mongodb://localhost:27017/animadverto', { useNewUrlParser: true })
     .then(() => {
@@ -17,11 +17,10 @@ mongoose.connect('mongodb://localhost:27017/animadverto', { useNewUrlParser: tru
         console.log(e);
     });
 
-// ------------------------------------------------------------------
+// ---------------------------------------------------------------------------------
+
 // To prevent deprectation warnings (from MongoDB native driver)
 mongoose.set('useCreateIndex', true);
 mongoose.set('useFindAndModify', false);
 
-module.exports = {
-    mongoose
-};
+module.exports = { mongoose };

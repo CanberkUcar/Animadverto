@@ -1,14 +1,17 @@
+<!-- POPUP SCREEN OF NEW CATEGORY ---------------------------------------------------------------------------------------------->
 <div class="centered-content">
     <div class="modal-box has-background-light">
-        <h1 class="title">
-            Create a Category
-        </h1>
+        <h1 class="title"> Create a Category </h1> <!-- Text of Button. -->
 
+        <!-- INPUT AREA FOR CATEGORY NAME -------------------------------------------------------------------------------------->
         <input #categoryTitleInput class="input has-background-light is-medium" type="text" placeholder="Enter category name...">
         <br><br>
+        
+        <!-- BUTTONS ----------------------------------------------------------------------------------------------------------->
         <div class="buttons is-right">
           <button class="button is-medium" routerLink="/">Cancel</button>
-          <button class="button is-primary has-text-white is-medium" (click)="createCategory(categoryTitleInput.value)">Create</button>
+          <button class="button is-primary has-text-white is-medium"
+          (click)="createCategory(categoryTitleInput.value)">Create</button>
         </div>
     </div>
 </div>

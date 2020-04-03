@@ -1,41 +1,45 @@
 <div class="centered-content">
     <div class="entry-manager-container">
-
+        
+        <!-- SIDEBAR STARTS HERE. ------------------------------------------------------------->
         <div class="sidebar has-background-white">
-            <h1 class="title has-text-primary">
-                Categories
-            </h1>
+            
+            <!-- Category Title. ------------------------------>
+            <h1 class="title has-text-primary"> Categories </h1>
 
+            <!-- Category Menu. ------------------------------->
             <div class="catalog-menu">
                 <!-- NG FOR LOOP-->
                 <a class="catalog-menu-item" *ngFor="let category of categories" [routerLink]="['/categories', category._id]" routerLinkActive="is-active">
-                    <p>{{ category.title }}</p>
+                    <p>{{ category.title }}</p> <!-- Dynamic Output. -->
                 </a>
-
             </div>
 
+            <!-- Category Add Button. ----------------------------------->
             <button class="button is-primary" routerLink="/new-category" >+ New Catalog</button>
-            
+        
         </div>
+        <!-- SIDEBAR ENDS. -------------------------------------------------------------------->
 
+
+        <!-- RIGHT BAR STARTS HERE. ----------------------------------------------------------->
         <div class="entry-catalog-container has-background-light">
-            <h1 class="title has-text-primary">
-                Entries
-            </h1>
 
-            <!-- Entry ELEMENTS -->
+            <!-- Entry Title. ------------------------------>
+            <h1 class="title has-text-primary"> Entries </h1>
+
+            <!-- Entry ELEMENTS NG FOR LOOP -->
             <div class="entry" *ngFor="let entry of entries">
                 <div class="entry-text">
-                    <p>{{ entry.title }}</p>
+                    <p>{{ entry.title }}</p> <!-- Dynamic Output. -->
                 </div>
             </div>
 
-            <button class="circle-add-button">
-
-            </button>
+            <!-- Entry Add Button. ---------->
+            <button class="circle-add-button"></button>
             
         </div>
+        <!-- RIGHTBAR ENDS. ------------------------------------------------------------------>
 
     </div>
-
 </div>

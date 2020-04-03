@@ -3,7 +3,5 @@
 const { Category } = require('./category.model');
 const { Entry } = require('./entry.model');
 
-module.exports = {
-    Category,
-    Entry
-}
+// Exporting. ----------------------------------------------
+module.exports = { Category, Entry }
