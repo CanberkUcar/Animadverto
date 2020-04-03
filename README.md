@@ -17,7 +17,7 @@ Extention that I used on VsCode for the commenting is: Anchor Comments.
 
 There are two main sections on this project. API and FRONTEND
 
-# FrontEnd. -------------------------------------------------------------------------------------------------------------
+# FrontEnd. -------------------------------------------------------------------------------------
 
 ```sh
 $ cd ../frontend
@@ -28,7 +28,7 @@ $ ng serve
 http://localhost:3000 will start-up for Angular Service.
 ```
 
-# API and BackEnd / MongoDB. --------------------------------------------------------------------------------------------
+# API and BackEnd / MongoDB. --------------------------------------------------------------------
 
 ```sh
 $ cd ../api
@@ -41,7 +41,7 @@ http://localhost:5000 for Mongoose Service.
 
 If getting error that jobs are undefined you can still run "npm run dev" "npm start --prefix client"
 
-# MONGODB USAGE. --------------------------------------------------------------------------------------------------------
+# MONGODB USAGE. --------------------------------------------------------------------------------
 
 ```sh
 $ sudo service mongodb start
