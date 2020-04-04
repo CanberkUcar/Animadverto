@@ -28,7 +28,7 @@ export class EntryViewComponent implements OnInit {
 
     this.route.params.subscribe(
       (params: Params) => {
-        console.log(params); // Testing.
+        // console.log(params); // REVIEW: Testing.
 
         // Entries input handling through params from EntryService. --------------------
         this.entryService.getEntries(params.categoryId).subscribe((entries: any[]) => {

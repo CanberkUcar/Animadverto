@@ -1,0 +1,18 @@
+<!-- POPUP SCREEN OF NEW ENTRY ---------------------------------------------------------------------------------------------->
+<div class="centered-content">
+    <div class="modal-box has-background-light">
+        <h1 class="title"> Create an Entry </h1> <!-- Text of Button. -->
+
+        <!-- INPUT AREA FOR ENTRY ------------------------------------------------------------------------------------------->
+        <input #entryTitleInput class="input has-background-light is-medium" type="text" placeholder="Enter an entry name...">
+        <br><br>
+        
+        
+        <!-- BUTTONS ----------------------------------------------------------------------------------------------------------->
+        <div class="buttons is-right">
+          <button class="button is-medium" routerLink="/">Cancel</button>
+          <button class="button is-primary has-text-white is-medium"
+          (click)="createEntry(entryTitleInput.value)">Create</button>
+        </div>
+    </div>
+</div>

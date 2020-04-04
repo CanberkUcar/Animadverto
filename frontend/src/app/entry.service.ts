@@ -16,12 +16,6 @@ export class EntryService {
 
 /* ANCHOR MANUAL METHODS. -------------------------------- */
   
-  createCategory(title: string) { 
-    // Sending a web request to create a list.
-    // Outsourcing to a another service. 
-    return this.webReqService.post('categories', { title });
-  }
-
   getCategories(){
     // Getting categories list. Just as in Postman.
     return this.webReqService.get('categories');
@@ -32,6 +26,20 @@ export class EntryService {
     // Param _> categoryId.
     return this.webReqService.get(`categories/${categoryId}/entries`);
   }
+
+  createCategory(title: string) { 
+    // Sending a web request to create a category.
+    // Outsourcing to a another service. 
+    return this.webReqService.post('categories', { title });
+  }
+
+  createEntry(title: string, categoryId: string) { 
+    // Sending a web request to create a entry.
+    // Outsourcing to a another service. 
+    return this.webReqService.post(`categories/${categoryId}/entries`, { title });
+  }
+
+
 
   /* END OF MANUAL METHODS ------------------------------- */
 }

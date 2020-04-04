@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { EntryViewComponent } from './pages/entry-view/entry-view.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { NewCategoryComponent } from './pages/new-category/new-category.component'; // Importing Http Client
+import { NewCategoryComponent } from './pages/new-category/new-category.component';
+import { NewEntryComponent } from './pages/new-entry/new-entry.component'; // Importing Http Client
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryViewComponent,
-    NewCategoryComponent
+    NewCategoryComponent,
+    NewEntryComponent
   ],
   imports: [
     BrowserModule,

@@ -14,14 +14,18 @@ import { Routes, RouterModule } from '@angular/router';
 // Imported Components. ------------------------------------------------------------
 import { EntryViewComponent } from './pages/entry-view/entry-view.component';
 import { NewCategoryComponent } from './pages/new-category/new-category.component';
+import { NewEntryComponent } from './pages/new-entry/new-entry.component';
 
 
 // SECTION Routes. -----------------------------------------------------------------
 const routes: Routes = [
   { path: '', redirectTo: '/categories', pathMatch: 'full' },
   { path: 'new-category', component: NewCategoryComponent },
+
   { path: 'categories', component:EntryViewComponent },
-  { path: 'categories/:categoryId', component:EntryViewComponent }
+  { path: 'categories/:categoryId', component:EntryViewComponent },
+
+  { path: 'categories/:categoryId/new-entry', component: NewEntryComponent}
 ];
 // END OF ROUTES -------------------------------------------------------------------
 
